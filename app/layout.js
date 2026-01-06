@@ -1,33 +1,36 @@
-import { Playfair_Display, Lato } from "next/font/google";
+import { Inter, Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { CartProvider } from "@/context/CartContext";
+import CartModal from "@/components/CartModal";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  display: "swap",
 });
 
 const lato = Lato({
-  weight: ["300", "400", "700"],
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-lato",
-  display: "swap",
 });
 
 export const metadata = {
-  title: "Hader Five Star Hotel | Luxury Dining",
-  description: "Experience the finest dining at Hader Five Star Hotel. Exquisite cuisine, elegant ambience, and world-class service.",
+  title: "Hader Dhaba | Luxury Dining",
+  description: "Experience the finest cuisine at Hader Dhaba.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang="en">
+      <body className={`${playfair.variable} ${lato.variable}`}>
+        <CartProvider>
+          <Navbar />
+          <CartModal />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

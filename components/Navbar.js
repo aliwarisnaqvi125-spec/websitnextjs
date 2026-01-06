@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useCart } from '@/context/CartContext';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const { totalItems, setIsCartOpen } = useCart();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,12 +25,18 @@ export default function Navbar() {
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.navContainer}`}>
                 <Link href="/" className={styles.logo}>
-                    HADER
+                    HADER DHABA
                 </Link>
                 <div className={styles.navLinks}>
                     <Link href="/" className={styles.navLink}>Home</Link>
                     <Link href="/menu" className={styles.navLink}>Menu</Link>
                     <Link href="/reservations" className={styles.navLink}>Reservations</Link>
+                    <button
+                        className={styles.cartBtn}
+                        onClick={() => setIsCartOpen(true)}
+                    >
+                        Cart ({totalItems})
+                    </button>
                 </div>
             </div>
         </nav>
