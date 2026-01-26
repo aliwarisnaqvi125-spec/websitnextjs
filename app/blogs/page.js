@@ -119,11 +119,6 @@ export default function BlogsPage() {
                 ))}
             </div>
 
-            {/* Bottom Ad Script */}
-            <section style={{ padding: '40px 0', textAlign: 'center' }}>
-                <script async data-cfasync="false" src="https://pl28573155.effectivegatecpm.com/bf60bec2f0f2dd882966e7f011321553/invoke.js"></script>
-                <div id="container-bf60bec2f0f2dd882966e7f011321553"></div>
-            </section>
         </main>
     );
 }
