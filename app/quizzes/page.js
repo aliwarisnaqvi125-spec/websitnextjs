@@ -68,34 +68,50 @@ export default function QuizzesPage() {
                     ))}
                 </div>
             ) : (
-                <div className="social-card" style={{ maxWidth: '600px', margin: '40px auto' }}>
-                    {!showResults ? (
-                        <>
-                            <h3>{activeQuiz.title}</h3>
-                            <p className="mb-4" style={{ color: 'var(--color-primary)' }}>Question {currentQuestion + 1} of {activeQuiz.questions.length}</p>
-                            <h4 className="mb-4">{activeQuiz.questions[currentQuestion].q}</h4>
-                            <div style={{ display: 'grid', gap: '15px' }}>
-                                {activeQuiz.questions[currentQuestion].a.map((option, idx) => (
-                                    <button
-                                        key={idx}
-                                        onClick={() => handleAnswer(idx)}
-                                        className="btn-outline"
-                                        style={{ textAlign: 'left', textTransform: 'none' }}
-                                    >
-                                        {option}
-                                    </button>
-                                ))}
+                <>
+                    <div className="social-card" style={{ maxWidth: '600px', margin: '40px auto' }}>
+                        {!showResults ? (
+                            <>
+                                <h3>{activeQuiz.title}</h3>
+                                <p className="mb-4" style={{ color: 'var(--color-primary)' }}>Question {currentQuestion + 1} of {activeQuiz.questions.length}</p>
+                                <h4 className="mb-4">{activeQuiz.questions[currentQuestion].q}</h4>
+                                <div style={{ display: 'grid', gap: '15px' }}>
+                                    {activeQuiz.questions[currentQuestion].a.map((option, idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={() => handleAnswer(idx)}
+                                            className="btn-outline"
+                                            style={{ textAlign: 'left', textTransform: 'none' }}
+                                        >
+                                            {option}
+                                        </button>
+                                    ))}
+                                </div>
+                            </>
+                        ) : (
+                            <div className="text-center">
+                                <h2>Quiz Completed!</h2>
+                                <p className="mb-4" style={{ fontSize: '1.5rem', margin: '20px 0' }}>Your Score: {score} / {activeQuiz.questions.length}</p>
+                                <button onClick={() => setActiveQuiz(null)} className="btn-primary">Back to Quizzes</button>
                             </div>
-                        </>
-                    ) : (
-                        <div className="text-center">
-                            <h2>Quiz Completed!</h2>
-                            <p className="mb-4" style={{ fontSize: '1.5rem', margin: '20px 0' }}>Your Score: {score} / {activeQuiz.questions.length}</p>
-                            <button onClick={() => setActiveQuiz(null)} className="btn-primary">Back to Quizzes</button>
+                        )}
+                    </div>
+
+                    {/* Ad Section Below Quiz */}
+                    <section style={{ padding: '40px 0', textAlign: 'center' }}>
+                        <div className="container">
+                            <script async data-cfasync="false" src="https://pl28573155.effectivegatecpm.com/bf60bec2f0f2dd882966e7f011321553/invoke.js"></script>
+                            <div id="container-bf60bec2f0f2dd882966e7f011321553"></div>
                         </div>
-                    )}
-                </div>
+                    </section>
+                </>
             )}
+
+            {/* Bottom Ad Script */}
+            <section style={{ padding: '40px 0', textAlign: 'center' }}>
+                <script async data-cfasync="false" src="https://pl28573155.effectivegatecpm.com/bf60bec2f0f2dd882966e7f011321553/invoke.js"></script>
+                <div id="container-bf60bec2f0f2dd882966e7f011321553"></div>
+            </section>
         </main>
     );
 }

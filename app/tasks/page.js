@@ -34,6 +34,12 @@ export default function TasksPage() {
                 <p className="mb-4" style={{ color: 'var(--color-gray-soft)' }}>Points can be used to unlock premium content, ad-free experience, and special badges.</p>
                 <button className="btn-outline">Coming Soon</button>
             </section>
+
+            {/* Bottom Ad Script */}
+            <section style={{ padding: '40px 0', textAlign: 'center' }}>
+                <script async data-cfasync="false" src="https://pl28573155.effectivegatecpm.com/bf60bec2f0f2dd882966e7f011321553/invoke.js"></script>
+                <div id="container-bf60bec2f0f2dd882966e7f011321553"></div>
+            </section>
         </main>
     );
 }
