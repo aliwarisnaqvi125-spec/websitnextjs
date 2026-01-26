@@ -18,17 +18,17 @@ export default function Hero() {
             </div>
 
             <div className={styles.content}>
-                <p className={styles.subtitle}>Welcome to</p>
-                <h1 className={styles.title}>Hader Five Star Hotel</h1>
+                <p className={styles.subtitle}>Challenge Yourself</p>
+                <h1 className={styles.title}>Earn Rewards from Quizzes</h1>
                 <p className="mb-4" style={{ fontSize: '1.2rem', color: '#ccc' }}>
-                    Where culinary art meets timeless elegance.
+                    Test your knowledge about UK and US cities and earn points for every correct answer.
                 </p>
                 <div className={styles.buttons}>
-                    <Link href="/menu" className="btn-primary">
-                        View Menu
+                    <Link href="/quizzes" className="btn-primary">
+                        Start Quiz
                     </Link>
-                    <Link href="/reservations" className="btn-outline">
-                        Book a Table
+                    <Link href="/tasks" className="btn-outline">
+                        View Tasks
                     </Link>
                 </div>
             </div>

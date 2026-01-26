@@ -5,29 +5,49 @@ export default function Home() {
   return (
     <main>
       <Hero />
+
       <section className="section-padding container">
-        <div className="card-3d" style={{ padding: '40px', borderRadius: '12px', background: 'rgba(20,20,20,0.6)' }}>
-          <h2 className="text-center mb-4 text-3d" style={{ fontSize: '2.5rem' }}>Our Story</h2>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', lineHeight: '1.8', color: '#ccc' }}>
-            <p className="mb-4">
-              Established in 1985, Hader Dhaba has been the epitome of luxury dining.
-              Our chefs use only the finest ingredients, sourced locally and globally, to create
-              masterpieces that delight both the palate and the eye.
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+
+          <div className="social-card">
+            <h3 className="mb-2">Daily Quizzes</h3>
+            <p className="mb-4" style={{ color: 'var(--color-gray-soft)' }}>
+              Test your knowledge about top UK and US cities. Earn points for every correct answer!
             </p>
-            <p>
-              Whether you are joining us for a romantic dinner, a business lunch, or a family celebration,
-              we promise an experience that is nothing short of extraordinary.
-            </p>
+            <Link href="/quizzes" className="btn-primary">Play Now</Link>
           </div>
+
+          <div className="social-card">
+            <h3 className="mb-2">Social Tasks</h3>
+            <p className="mb-4" style={{ color: 'var(--color-gray-soft)' }}>
+              Complete simple tasks like sharing or inviting friends to earn exclusive rewards.
+            </p>
+            <Link href="/tasks" className="btn-primary">View Tasks</Link>
+          </div>
+
+          <div className="social-card">
+            <h3 className="mb-2">City Insights</h3>
+            <p className="mb-4" style={{ color: 'var(--color-gray-soft)' }}>
+              Explore CPM rankings and valuable blog content about London, New York, and more.
+            </p>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <Link href="/cities" className="stat-badge" style={{ textDecoration: 'none' }}>Rankings</Link>
+              <Link href="/blogs" className="stat-badge" style={{ textDecoration: 'none', background: 'rgba(99, 102, 241, 0.1)', color: 'var(--color-primary)' }}>Blogs</Link>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <section className="section-padding" style={{ background: 'transparent' }}>
+      <section className="section-padding" style={{ background: 'rgba(255,255,255,0.02)' }}>
         <div className="container text-center">
-          <h2 className="mb-4 text-3d" style={{ fontSize: '2.5rem' }}>Exquisite Cuisine</h2>
-          <p className="mb-4" style={{ color: '#aaa' }}>Explore our seasonal menu featuring world-class dishes.</p>
+          <h2 className="mb-4" style={{ fontSize: '2.5rem' }}>Why CityPulse?</h2>
+          <p className="mb-4" style={{ color: 'var(--color-gray-soft)', maxWidth: '800px', margin: '0 auto' }}>
+            We bring you the most engaging content focused on the vibrant life of major cities in the UK and US.
+            Join thousands of users competing in quizzes and staying updated with the latest trends.
+          </p>
           <div style={{ marginTop: '40px' }}>
-            <Link href="/menu" className="btn-primary">View Full Menu</Link>
+            <Link href="/tasks" className="btn-outline">Join the Community</Link>
           </div>
         </div>
       </section>
