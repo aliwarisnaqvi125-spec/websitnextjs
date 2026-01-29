@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
         <script async src="https://www.effectivegatecpm.com/cr34x6udpd?key=0d0d7361f4e6a1ddd77010517bc012c0"></script>
       </head>
       <body className={inter.className}>
+        <script src="https://quge5.com/88/tag.min.js" data-zone="206034" async data-cfasync="false"></script>
         <Navbar />
         {children}
         <Footer />
